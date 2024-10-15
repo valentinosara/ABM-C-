@@ -29,7 +29,9 @@ namespace ABM_ValentinoSara.Models
             }
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        
+
+        partial void OnModelCreatingPartial(ModelBuilder modeprotected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Booking>(entity =>
             {
@@ -59,8 +61,6 @@ namespace ABM_ValentinoSara.Models
             });
 
             OnModelCreatingPartial(modelBuilder);
-        }
-
-        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+        }lBuilder);
     }
 }
