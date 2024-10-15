@@ -1,0 +1,36 @@
+﻿@model ABM_ValentinoSara.Models.Booking
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<dl class="row">
+    <dt class="col-sm-2">Cliente</dt>
+    <dd class="col-sm-10">@Model.NombreCliente</dd>
+
+    <dt class="col-sm-2">Detalles del Tour</dt>
+    <dd class="col-sm-10">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre del Tour</th>
+                    <th>Fecha</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.Tour.Nombre</td>
+                    <td>@Model.Tour.Fecha</td>
+                    <td>@Model.Tour.Precio</td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+</dl>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
